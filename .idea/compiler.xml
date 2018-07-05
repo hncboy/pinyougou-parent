@@ -17,7 +17,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="pinyougou-interface" target="1.7" />
-      <module name="pinyougou-manager-web" target="1.7" />
       <module name="pinyougou-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
