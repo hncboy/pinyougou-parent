@@ -66,8 +66,8 @@
         </where>
     </sql>
     <sql id="Base_Column_List">
-    id, spec_name
-  </sql>
+        id, spec_name
+    </sql>
     <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.pinyougou.pojo.TbSpecificationExample">
         select
         <if test="distinct">
@@ -89,9 +89,9 @@
         where id = #{id,jdbcType=BIGINT}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from tb_specification
-    where id = #{id,jdbcType=BIGINT}
-  </delete>
+        delete from tb_specification
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
     <delete id="deleteByExample" parameterType="com.pinyougou.pojo.TbSpecificationExample">
         delete from tb_specification
         <if test="_parameter != null">
@@ -163,8 +163,12 @@
         where id = #{id,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.pinyougou.pojo.TbSpecification">
-    update tb_specification
-    set spec_name = #{specName,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
+        update tb_specification
+        set spec_name = #{specName,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="selectOptionList" resultType="java.util.Map">
+        select id,spec_name as text from tb_specification
+    </select>
 </mapper>
