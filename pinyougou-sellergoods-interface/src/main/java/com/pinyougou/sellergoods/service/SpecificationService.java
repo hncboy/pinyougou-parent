@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.pinyougou.pojo.TbSpecification;
 
+import com.pinyougou.pojogroup.Specification;
 import entity.PageResult;
 
 /**
@@ -28,12 +29,12 @@ public interface SpecificationService {
     /**
      * 增加
      */
-    void add(TbSpecification specification);
+    void add(Specification specification);
 
     /**
      * 修改
      */
-    void update(TbSpecification specification);
+    void update(Specification specification);
 
     /**
      * 根据ID获取实体
@@ -41,7 +42,7 @@ public interface SpecificationService {
      * @param id
      * @return
      */
-    TbSpecification findOne(Long id);
+    Specification findOne(Long id);
 
     /**
      * 批量删除
