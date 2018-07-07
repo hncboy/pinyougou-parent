@@ -51,6 +51,20 @@ app.controller('sellerController', function ($scope, $controller, sellerService)
         );
     };
 
+    //新增
+    $scope.add = function () {
+        sellerService.add($scope.entity).success(
+            function (response) {
+                if (response.success) {
+                    //如果注册成功，跳转到登录页
+                    location.href = "shoplogin.html";
+                } else {
+                    alert(response.message);
+                }
+            }
+        );
+    };
+
     //批量删除
     $scope.dele = function () {
         //获取选中的复选框
@@ -65,13 +79,25 @@ app.controller('sellerController', function ($scope, $controller, sellerService)
     };
 
     $scope.searchEntity = {};//定义搜索对象
-
     //搜索
     $scope.search = function (page, rows) {
         sellerService.search(page, rows, $scope.searchEntity).success(
             function (response) {
                 $scope.list = response.rows;
                 $scope.paginationConf.totalItems = response.total;//更新总记录数
+            }
+        );
+    };
+
+    //更改状态
+    $scope.updateStatus = function (sellerId, status) {
+        sellerService.updateStatus(sellerId, status).success(
+            function (response) {
+                if (response.success) {
+                    $scope.reloadList();
+                } else {
+                    alert(response.message);
+                }
             }
         );
     };
