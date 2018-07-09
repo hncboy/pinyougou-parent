@@ -13,11 +13,13 @@ import com.pinyougou.pojo.TbItemExample.Criteria;
 import com.pinyougou.sellergoods.service.ItemService;
 
 import entity.PageResult;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 服务实现层
  */
 @Service
+@Transactional
 public class ItemServiceImpl implements ItemService {
 
     @Autowired

@@ -13,11 +13,13 @@ import com.pinyougou.pojo.TbSpecificationOptionExample.Criteria;
 import com.pinyougou.sellergoods.service.SpecificationOptionService;
 
 import entity.PageResult;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 服务实现层
  */
 @Service
+@Transactional
 public class SpecificationOptionServiceImpl implements SpecificationOptionService {
 
     @Autowired

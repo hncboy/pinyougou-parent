@@ -1,9 +1,8 @@
-package com.pinyougou.shop.controller;
+package com.pinyougou.manager.controller;
 
 import java.util.List;
 
 import com.pinyougou.pojogroup.Goods;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +15,8 @@ import entity.Result;
 
 /**
  * controller
+ *
+ * @author Administrator
  */
 @RestController
 @RequestMapping("/goods")
@@ -33,6 +34,7 @@ public class GoodsController {
     public List<TbGoods> findAll() {
         return goodsService.findAll();
     }
+
 
     /**
      * 返回全部列表
@@ -52,10 +54,6 @@ public class GoodsController {
      */
     @RequestMapping("/add")
     public Result add(@RequestBody Goods goods) {
-        //获取商家ID
-        String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
-        goods.getGoods().setSellerId(sellerId); //设置商家ID
-
         try {
             goodsService.add(goods);
             return new Result(true, "增加成功");
@@ -73,13 +71,6 @@ public class GoodsController {
      */
     @RequestMapping("/update")
     public Result update(@RequestBody Goods goods) {
-        //当前商家ID
-        String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
-        //首先判断商品是否为该商家商品
-        Goods goods2 = goodsService.findOne(goods.getGoods().getId());
-        if (!goods2.getGoods().getSellerId().equals(sellerId) || !goods2.getGoods().getSellerId().equals(sellerId)) {
-            return new Result(false, "非法操作");
-        }
         try {
             goodsService.update(goods);
             return new Result(true, "修改成功");
@@ -127,9 +118,17 @@ public class GoodsController {
      */
     @RequestMapping("/search")
     public PageResult search(@RequestBody TbGoods goods, int page, int rows) {
-        //获取商家ID
-        String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
-        goods.setSellerId(sellerId);
         return goodsService.findPage(goods, page, rows);
+    }
+
+    @RequestMapping("/updateStatus")
+    public Result updateStatus(Long[] ids, String status) {
+        try {
+            goodsService.updateStatus(ids, status);
+            return new Result(true, "成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(false, "失败");
+        }
     }
 }
