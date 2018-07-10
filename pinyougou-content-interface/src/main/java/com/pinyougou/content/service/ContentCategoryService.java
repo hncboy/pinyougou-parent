@@ -16,7 +16,7 @@ public interface ContentCategoryService {
      *
      * @return
      */
-    public List<TbContentCategory> findAll();
+    List<TbContentCategory> findAll();
 
 
     /**
@@ -24,19 +24,19 @@ public interface ContentCategoryService {
      *
      * @return
      */
-    public PageResult findPage(int pageNum, int pageSize);
+    PageResult findPage(int pageNum, int pageSize);
 
 
     /**
      * 增加
      */
-    public void add(TbContentCategory contentCategory);
+    void add(TbContentCategory contentCategory);
 
 
     /**
      * 修改
      */
-    public void update(TbContentCategory contentCategory);
+    void update(TbContentCategory contentCategory);
 
 
     /**
@@ -45,7 +45,7 @@ public interface ContentCategoryService {
      * @param id
      * @return
      */
-    public TbContentCategory findOne(Long id);
+    TbContentCategory findOne(Long id);
 
 
     /**
@@ -53,7 +53,7 @@ public interface ContentCategoryService {
      *
      * @param ids
      */
-    public void delete(Long[] ids);
+    void delete(Long[] ids);
 
     /**
      * 分页
@@ -62,6 +62,6 @@ public interface ContentCategoryService {
      * @param pageSize 每页记录数
      * @return
      */
-    public PageResult findPage(TbContentCategory contentCategory, int pageNum, int pageSize);
+    PageResult findPage(TbContentCategory contentCategory, int pageNum, int pageSize);
 
 }

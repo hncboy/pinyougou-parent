@@ -7,7 +7,7 @@ var czConfig = {
     basePath : "",// 网站根
     apiServer : ""// api服务器
 };
-;/*!components/js-modules/function/czHttp.js*/
+/*!components/js-modules/function/czHttp.js*/
 var czHttp = {
 
     // 获取url传递参数
@@ -56,7 +56,7 @@ var czHttp = {
     }
 
 };
-;/*!components/js-modules/function/czString.js*/
+/*!components/js-modules/function/czString.js*/
 // 字符串格式化
 String.prototype.format = function() {
     var args = arguments;

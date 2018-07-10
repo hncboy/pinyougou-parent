@@ -74,4 +74,4 @@ app.controller("brandController", function ($scope, $controller, brandService) {
             }
         )
     };
-})
+});
