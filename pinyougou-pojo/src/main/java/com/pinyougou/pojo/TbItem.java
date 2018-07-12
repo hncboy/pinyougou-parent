@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Map;
 
-public class TbItem implements Serializable{
+public class TbItem implements Serializable {
 
     @Field
     private Long id;
@@ -36,6 +36,7 @@ public class TbItem implements Serializable{
 
     private Date createTime;
 
+    @Field("item_updatetime")
     private Date updateTime;
 
     private String itemSn;
