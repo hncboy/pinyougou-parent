@@ -13,7 +13,6 @@
     <packaging>war</packaging>
 
     <dependencies>
-
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
