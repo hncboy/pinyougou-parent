@@ -102,5 +102,5 @@ app.controller('goodsController', function ($scope, $controller, goodsService, i
                 }
             }
         )
-    }
+    };
 });	
