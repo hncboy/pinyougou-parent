@@ -1,10 +1,10 @@
 package com.pinyougou.order.service;
 
-import java.util.List;
-
 import com.pinyougou.pojo.TbOrder;
-
+import com.pinyougou.pojo.TbPayLog;
 import entity.PageResult;
+
+import java.util.List;
 
 /**
  * 服务层接口
@@ -58,4 +58,20 @@ public interface OrderService {
      * @return
      */
     PageResult findPage(TbOrder order, int pageNum, int pageSize);
+
+    /**
+     * 根据用户ID获取支付日志
+     *
+     * @param userId
+     * @return
+     */
+    TbPayLog searchPayLogFromRedis(String userId);
+
+    /**
+     * 支付成功修改状态
+     *
+     * @param out_trade_no
+     * @param transaction_id
+     */
+    void updateOrderStatus(String out_trade_no, String transaction_id);
 }
