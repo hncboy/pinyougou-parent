@@ -7,6 +7,7 @@ D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\c
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbContentMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbGoodsMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbUserMapper.java
+D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbSeckillGoodsMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbSpecificationMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbTypeTemplateMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbPayLogMapper.java
@@ -14,6 +15,7 @@ D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\c
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbBrandMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbOrderItemMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbContentCategoryMapper.java
+D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbSeckillOrderMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbSpecificationOptionMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbItemMapper.java
 D:\Project\IdeaProject\pingyougou\pinyougou-parent\pinyougou-dao\src\main\java\com\pinyougou\mapper\TbItemCatMapper.java

@@ -48,7 +48,7 @@ public class PayController {
             }
             if (map.get("trade_state").equals("SUCCESS")) { //支付成功
                 result = new Result(false, "支付成功");
-                orderService.updateOrderStatus(out_trade_no, map.get("transaction_id") + ""); //修改顶顶那啊zhu
+                orderService.updateOrderStatus(out_trade_no, map.get("transaction_id") + ""); //修改订单
                 break;
             }
             try {
