@@ -12,7 +12,6 @@
     <dubbo:protocol name="dubbo" port="20880"/>
 
     <dubbo:application name="pinyougou-pay-service"/>
-    <dubbo:registry address="zookeeper://192.168.25.141:2181" timeout="100000"/>
     <dubbo:annotation package="com.pinyougou.pay.service.impl"/>
 
 </beans>
