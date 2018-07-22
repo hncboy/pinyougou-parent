@@ -11,7 +11,6 @@
     <!-- 同时跑很多服务时需要写 -->
     <dubbo:protocol name="dubbo" port="20884"/>
     <dubbo:application name="pinyougou-search-service"/>
-    <dubbo:registry address="zookeeper://192.168.25.141:2181"/>
     <dubbo:annotation package="com.pinyougou.search.service.impl"/>
 
 </beans>
